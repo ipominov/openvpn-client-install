@@ -1,0 +1,11 @@
+---
+
+- hosts: ovpn_clients
+
+  remote_user: ansible
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  roles:
+    - openvpn-client-install

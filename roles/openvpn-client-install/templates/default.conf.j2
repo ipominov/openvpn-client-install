@@ -1,0 +1,27 @@
+﻿client
+nobind
+dev {{ ovpn_dev }}
+key-direction 1
+remote-cert-tls server
+
+remote {{ ovpn_addr }} {{ ovpn_port }} {{ ovpn_proto }}
+
+<ca>
+{{ lookup('file', 'files/ca.crt') }}
+</ca>
+
+<tls-auth>
+{{ lookup('file', 'files/server.crt') }}
+</tls-auth>
+
+<key>
+{{ lookup('file', 'files/client.key') }}
+</key>
+
+<cert>
+{{ lookup('file', 'files/client.crt') }}
+</cert>
+
+auth-nocache
+comp-lzo
+reneg-sec 259200

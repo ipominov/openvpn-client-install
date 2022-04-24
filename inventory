@@ -1,0 +1,9 @@
+[ovpn_clients]
+
+baikaltest ansible_host=192.168.0.12
+
+[ovpn_clients:vars]
+
+ansible_ssh_user=ansible  
+ansible_ssh_pass=Ansible321
+ansible_become_pass=Ansible321

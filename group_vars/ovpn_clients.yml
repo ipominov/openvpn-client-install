@@ -1,0 +1,6 @@
+---
+
+ovpn_addr: twvpn.timeweb.net
+ovpn_port: 1195
+ovpn_proto: udp
+ovpn_dev: tun
